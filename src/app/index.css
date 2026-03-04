@@ -17,6 +17,10 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --purple: #A66ADD;
+  --dark-purple: #A547F1;
+  --light-purple: #E9D0FA;
 }
 
 [data-theme="light"] {
