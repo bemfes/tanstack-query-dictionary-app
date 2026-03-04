@@ -1,0 +1,36 @@
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.switcher-btn {
+    width: 40px;
+    height: 20px;
+    background: grey;
+    border-radius: 20px;
+    border: none;
+    position: relative;
+}
+
+.switcher-btn::before {
+    content: '';
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    background: white;
+    position: absolute;
+    left: 4px;
+    transition: all .2s;
+}
+
+.switcher-btn_dark {
+    background: var(--dark-purple);
+}
+
+.switcher-btn_dark::before {
+    left: calc(100% - 15px - 4px);
+    transition: all .2s;
+}
