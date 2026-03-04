@@ -17,6 +17,16 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+[data-theme="light"] {
+  --bg-color: white;
+  --text-color: black;
+}
+
+[data-theme="dark"] {
+  --bg-color: black;
+  --text-color: white;
+}
+
 
 body {
   margin: 0;
@@ -24,5 +34,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background: var(--bg-color);
+  color: var(--text-color)
 }
 
