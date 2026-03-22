@@ -3,6 +3,13 @@ interface License {
     url: string;
 }
 
+interface Definition {
+    synonyms: string[];
+    antonyms: string[];
+    definition: string;
+    example: string;
+}
+
 interface Meaning {
     partOfSpeech: string;
     definitions: Definition[];
