@@ -17,6 +17,13 @@ interface Meaning {
     antonyms: string[]
 }
 
+interface PhoneticItem {
+    audio: string;
+    license: License;
+    sourceUrl: string;
+    text: string;
+}
+
 export interface DictionaryWordType {
     license: License;
     meanings: Meaning[];
