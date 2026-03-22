@@ -19,6 +19,9 @@ interface Meaning {
 
 export interface DictionaryWordType {
     license: License;
-    meanings: Meaning[]
+    meanings: Meaning[];
+    phonetic: string;
+    phonetics: PhoneticItem[];
+    sourceUrls: string[];
     word: string;
 }
