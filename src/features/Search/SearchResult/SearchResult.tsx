@@ -1,6 +1,7 @@
 import type { FC } from "react";
 import type { SearchResultProps } from "./types";
 import type { DictionaryWordType } from "@/shared/types/DictionaryWordType";
+import "./SearchResult.css"
 
 const SearchResult: FC<SearchResultProps> = ({ data, isLoading, error }) => {
     return (
@@ -10,12 +11,12 @@ const SearchResult: FC<SearchResultProps> = ({ data, isLoading, error }) => {
                 {
                     data.map( (item: DictionaryWordType, index) => (
                         <div key={index}>
-                            <p>{item.word}</p>
-                            <p>{item.phonetic}</p>
+                            <p className="word__name">{item.word}</p>
+                            <p className="word__phonetic">{item.phonetic}</p>
                             <div>
                                 {item.meanings.map(meaning => (
                                     <>
-                                    <p>{meaning.partOfSpeech}</p>
+                                    <p className="word__part-speech">{meaning.partOfSpeech}</p>
                                     <div>
                                         {meaning.definitions.map(defs => (
                                             <p>{defs.definition}</p>
