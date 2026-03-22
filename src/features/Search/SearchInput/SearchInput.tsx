@@ -15,9 +15,9 @@ const SearchInput: FC<SearchInputProps> = ({ inputValue, onChangeSearchInput, on
             <div className="search-input__content">
                 <Input className="search-input" value={inputValue} onKeyDown={onKeyDownSearchInput} onChange={onChangeSearchInput} type="search" placeholder="Search..."/>
                 <Button className="search-input__btn" onClick={onClickButtonDeleteSearchValue}>
-                    <IconClear className="search-input__icon-clear"/>    
+                    <IconClear className="search-input__icon-clear search-input__btn-left"/>    
                 </Button>    
-                <Button className="search-input__btn search-input__btn-left" onClick={onClickButtonSearch}>
+                <Button className="search-input__btn " onClick={onClickButtonSearch}>
                     <IconSearch className="search-input__icon-search"/>
                 </Button>
             
