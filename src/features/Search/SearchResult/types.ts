@@ -1,5 +1,7 @@
+import type { DictionaryWordType } from "@/shared/types/DictionaryWordType";
+
 export interface SearchResultProps {
-    data: any;
+    data: DictionaryWordType[];
     isLoading: boolean;
     error: Error | null;
 }
