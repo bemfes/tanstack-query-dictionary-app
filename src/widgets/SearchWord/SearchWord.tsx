@@ -5,7 +5,7 @@ import { useState } from "react";
 
 const SearchWord = () => {
   
-    const [searchValue, setSearchValue] = useState<string>('')
+    const [searchValue, setSearchValue] = useState<string>('keyboard')
 
     const onChangeSearchInput = (e: React.ChangeEvent<HTMLInputElement >) => {
         const value = e.target.value.toLowerCase()
@@ -44,8 +44,6 @@ const SearchWord = () => {
 
     }
     const { data, isLoading, error, refetch } = useQuery({ queryKey: ['search'], queryFn: getData,
-         enabled: false,
-         retry: false,
      })
     
     return (
@@ -57,7 +55,6 @@ const SearchWord = () => {
              onClickButtonSearch={onClickButtonSearch}
              onClickButtonDeleteSearchValue={onClickButtonDeleteSearchValue}
              />
-            
             <SearchResult data={data} isLoading={isLoading} error={error}/>
             
 
