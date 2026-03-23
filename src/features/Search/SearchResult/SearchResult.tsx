@@ -6,7 +6,7 @@ import "./SearchResult.css"
 const SearchResult: FC<SearchResultProps> = ({ data, isLoading, error }) => {
     return (
         <div>
-            {isLoading && <p>Loading...</p>}
+            {isLoading && <p className="search-result-util">Loading...</p>}
             {!isLoading && data && !error && <div>
                 {
                     data.map( (item: DictionaryWordType, index) => (
@@ -52,7 +52,7 @@ const SearchResult: FC<SearchResultProps> = ({ data, isLoading, error }) => {
                
                 
             </div>}
-            { error && <p>{error.message}</p> }
+            { error && <p className="search-result-util">{error.message}</p> }
         </div>
     )
 }
