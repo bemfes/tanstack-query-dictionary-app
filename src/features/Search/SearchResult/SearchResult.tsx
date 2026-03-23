@@ -21,11 +21,11 @@ const SearchResult: FC<SearchResultProps> = ({ data, isLoading, error }) => {
                                     <p className="word__part-speech">{meaning.partOfSpeech}</p>
                                     <p className="word__meaning">Meaning</p>
                                     <ul className="word__defs-list">
-                                        {meaning.definitions.map(defs => (
-                                            <>
-                                            <li key={defs.definition} className="word__defs-list-item word__defs-list-item-dot">{defs.definition}</li>
-                                            {defs.example && <li key={defs.example} className="word__defs-list-item word__defs-list-item-example">"{defs.example}"</li>}
-                                            </>
+                                        {meaning.definitions.map((defs, index) => (
+                                            <li key={index}>
+                                            <p key={defs.definition} className="word__defs-list-item word__defs-list-item-dot">{defs.definition}</p>
+                                            {defs.example && <p key={defs.example} className="word__defs-list-item word__defs-list-item-example">"{defs.example}"</p>}
+                                            </li>
                                         ))}
                                     </ul> 
                                     
