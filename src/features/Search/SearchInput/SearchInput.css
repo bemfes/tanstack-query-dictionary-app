@@ -10,7 +10,7 @@
     border-radius: 30px;
     font-size: 20px;
     padding: 10px 0px;
-    background: rgb(237, 237, 237);
+    background: transparent;
     border: none;
     outline: none;
 
@@ -19,7 +19,7 @@
 .search-input__content {
     background: rgb(237, 237, 237);
     border-radius: 30px;
-    width: 60%;
+    width: 100%;
     display: flex;
     flex-direction: row;
     padding: 0px 25px;
