@@ -36,6 +36,16 @@ const SearchResult: FC<SearchResultProps> = ({ data, isLoading, error }) => {
                                     
                                 ))}
                             </div>
+                            <div className="word__source">
+                                Source: {
+                                item.sourceUrls.map((link, index) => (
+                                <>
+                                <a key={link} href={link}>{link}</a>
+                                {index < item.sourceUrls.length - 1 ? ', ' : ''}
+                                </>
+                            ))
+                            }
+                            </div>
                         </div>
                     ))
                 }
