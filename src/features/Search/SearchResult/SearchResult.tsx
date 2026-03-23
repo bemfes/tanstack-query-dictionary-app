@@ -24,6 +24,10 @@ const SearchResult: FC<SearchResultProps> = ({ data, isLoading, error }) => {
                                             <li className="word__defs-list-item">{defs.definition}</li>
                                         ))}
                                     </ul>
+                                     {meaning.synonyms.length > 0 && <p className="word__synonym">Synonyms: <span>{
+                                        meaning.synonyms.join(', ')
+                                        }</span>
+                                        </p>} 
                                     </div>
                                     
                                 ))}
