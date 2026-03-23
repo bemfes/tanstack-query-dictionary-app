@@ -1,3 +1,7 @@
+.word {
+    margin-bottom: 50px;
+}
+
 .word__name {
     font-size: 40px;
     font-weight: 600;
