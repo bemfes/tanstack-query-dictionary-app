@@ -66,13 +66,14 @@
     flex-shrink: 0;
 }
 
-.word__defs-list-item:not(:last-child) {
+.word__defs-list-item-box:not(:last-child) {
     margin-bottom: 10px;
 }
 
 .word__defs-list-item-example {
     padding-left: 13px;
     font-weight: 500;
+    padding-top: 10px;
 }
 
 .word__content {
