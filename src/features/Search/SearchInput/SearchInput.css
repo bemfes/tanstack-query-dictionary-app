@@ -13,7 +13,7 @@
     background: transparent;
     border: none;
     outline: none;
-
+    color: var(--text-color)
 }
 
 .search-input__content {
@@ -47,7 +47,7 @@
 
 .search-input__icon-search {
     stroke: var(--dark-purple);
-    fill: rgb(237, 237, 237);
+    fill: transparent;
     height: 24px;
     width: 24px;
 }
