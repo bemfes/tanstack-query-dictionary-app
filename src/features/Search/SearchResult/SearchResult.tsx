@@ -22,7 +22,7 @@ const SearchResult: FC<SearchResultProps> = ({ data, isLoading, error }) => {
                                     <p className="word__meaning">Meaning</p>
                                     <ul className="word__defs-list">
                                         {meaning.definitions.map((defs, index) => (
-                                            <li key={index}>
+                                            <li className="word__defs-list-item-box" key={index}>
                                             <p key={defs.definition} className="word__defs-list-item word__defs-list-item-dot">{defs.definition}</p>
                                             {defs.example && <p key={defs.example} className="word__defs-list-item word__defs-list-item-example">"{defs.example}"</p>}
                                             </li>
