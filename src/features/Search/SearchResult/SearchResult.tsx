@@ -10,7 +10,7 @@ const SearchResult: FC<SearchResultProps> = ({ data, isLoading, error }) => {
             {!isLoading && data && !error && <div>
                 {
                     data.map( (item: DictionaryWordType, index) => (
-                        <div key={index}>
+                        <div className="word" key={index}>
                             <p className="word__name">{item.word}</p>
                             <p className="word__phonetic">{item.phonetic}</p>
                             <div>
