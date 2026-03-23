@@ -1,9 +1,10 @@
-import type { FC } from "react";
+import { type FC } from "react";
 import type { SearchResultProps } from "./types";
 import type { DictionaryWordType } from "@/shared/types/DictionaryWordType";
 import "./SearchResult.css"
 
 const SearchResult: FC<SearchResultProps> = ({ data, isLoading, error }) => {
+    
     return (
         <div>
             {isLoading && <p className="search-result-util">Loading...</p>}
@@ -22,11 +23,11 @@ const SearchResult: FC<SearchResultProps> = ({ data, isLoading, error }) => {
                                     <ul className="word__defs-list">
                                         {meaning.definitions.map(defs => (
                                             <>
-                                            <li className="word__defs-list-item word__defs-list-item-dot">{defs.definition}</li>
-                                            {defs.example && <li className="word__defs-list-item word__defs-list-item-example">"{defs.example}"</li>}
+                                            <li key={defs.definition} className="word__defs-list-item word__defs-list-item-dot">{defs.definition}</li>
+                                            {defs.example && <li key={defs.example} className="word__defs-list-item word__defs-list-item-example">"{defs.example}"</li>}
                                             </>
                                         ))}
-                                    </ul>
+                                    </ul> 
                                     
                                      {meaning.synonyms.length > 0 && <p className="word__synonym">Synonyms: <span>{
                                         meaning.synonyms.join(', ')
@@ -39,10 +40,10 @@ const SearchResult: FC<SearchResultProps> = ({ data, isLoading, error }) => {
                             <div className="word__source">
                                 Source: {
                                 item.sourceUrls.map((link, index) => (
-                                <>
+                                <div key={`${index}-${link}`}>
                                 <a key={link} href={link}>{link}</a>
                                 {index < item.sourceUrls.length - 1 ? ', ' : ''}
-                                </>
+                                </div>
                             ))
                             }
                             </div>
