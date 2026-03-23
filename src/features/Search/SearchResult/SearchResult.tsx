@@ -15,8 +15,8 @@ const SearchResult: FC<SearchResultProps> = ({ data, isLoading, error }) => {
                             <p className="word__phonetic">{item.phonetic}</p>
                             <div>
                                 
-                                {item.meanings.map(meaning => (
-                                    <div className="word__content">
+                                {item.meanings.map((meaning, index) => (
+                                    <div key={index} className="word__content">
                                     <p className="word__part-speech">{meaning.partOfSpeech}</p>
                                     <p className="word__meaning">Meaning</p>
                                     <ul className="word__defs-list">
