@@ -42,3 +42,14 @@ body {
   color: var(--text-color)
 }
 
+@media(max-width: 767px) {
+  #root {
+    width: 80%;
+  }
+}
+@media(max-width: 576px) {
+  #root {
+    width: 95%;
+  }
+}
+
