@@ -16,7 +16,7 @@ const SearchResult: FC<SearchResultProps> = ({ data, isLoading, error }) => {
                             <div>
                                 
                                 {item.meanings.map(meaning => (
-                                    <>
+                                    <div className="word__content">
                                     <p className="word__part-speech">{meaning.partOfSpeech}</p>
                                     <p className="word__meaning">Meaning</p>
                                     <ul className="word__defs-list">
@@ -24,7 +24,7 @@ const SearchResult: FC<SearchResultProps> = ({ data, isLoading, error }) => {
                                             <li className="word__defs-list-item">{defs.definition}</li>
                                         ))}
                                     </ul>
-                                    </>
+                                    </div>
                                     
                                 ))}
                             </div>
