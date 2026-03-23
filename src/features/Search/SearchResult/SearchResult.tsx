@@ -14,14 +14,16 @@ const SearchResult: FC<SearchResultProps> = ({ data, isLoading, error }) => {
                             <p className="word__name">{item.word}</p>
                             <p className="word__phonetic">{item.phonetic}</p>
                             <div>
+                                
                                 {item.meanings.map(meaning => (
                                     <>
                                     <p className="word__part-speech">{meaning.partOfSpeech}</p>
-                                    <div>
+                                    <p className="word__meaning">Meaning</p>
+                                    <ul className="word__defs-list">
                                         {meaning.definitions.map(defs => (
-                                            <p>{defs.definition}</p>
+                                            <li className="word__defs-list-item">{defs.definition}</li>
                                         ))}
-                                    </div>
+                                    </ul>
                                     </>
                                     
                                 ))}
