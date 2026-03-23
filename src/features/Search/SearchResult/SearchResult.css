@@ -96,5 +96,6 @@
 }
 
 .word__source a {
-    color: var(--dark-purple)
+    color: var(--dark-purple);
+    word-break: break-all;
 }
