@@ -31,8 +31,10 @@ const SearchWord = () => {
             }
             const data = await res.json()
             return data
-        } catch (error) {
-            
+        } catch (error: unknown) {
+            if (error instanceof Error) {
+                throw new Error(error.message)
+            }
         }
         
 
