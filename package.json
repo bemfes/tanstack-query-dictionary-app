@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://bemfes.github.io/dictionary-app",
+  "homepage": "https://bemfes.github.io/tanstack-query-dictionary-app",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
