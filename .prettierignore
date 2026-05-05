@@ -1,0 +1,17 @@
+node_modules
+package-lock.json
+
+dist
+
+.cache
+*.log
+
+.vscode
+.idea
+
+coverage
+.env
+
+*-report.json
+*-report.txt
+coverage/
