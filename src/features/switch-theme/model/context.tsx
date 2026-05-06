@@ -2,6 +2,6 @@ import { createContext } from "react";
 import type { IThemeContext } from "./types";
 
 export const ThemeContext = createContext<IThemeContext>({
-    theme: 'light',
-    changeTheme: () => {}
-})
+  theme: "light",
+  changeTheme: () => {},
+});
