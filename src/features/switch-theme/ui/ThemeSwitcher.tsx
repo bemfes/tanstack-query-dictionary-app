@@ -1,6 +1,6 @@
 import { type FC } from "react";
-import Button from "../../../shared/ui/Button";
-import { useThemeContext } from "@/features/switch-theme/model/useThemeContext";
+import Button from "@/shared/ui/Button";
+import { useThemeContext } from "../model";
 import IconMoon from "@/shared/assets/icon-moon.svg?react";
 import "./ThemeSwitcher.css";
 
