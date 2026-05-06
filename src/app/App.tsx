@@ -1,5 +1,5 @@
+import Header from "@/widgets/Header";
 import "./index.css";
-import Header from "@/shared/ui/Header";
 import SearchPage from "@/pages/SearchPage";
 
 function App() {
