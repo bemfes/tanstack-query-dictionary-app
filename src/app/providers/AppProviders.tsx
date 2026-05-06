@@ -1,5 +1,8 @@
 import ThemeContextProvider from "@/features/switch-theme/model";
 import { ErrorBoundary } from "react-error-boundary";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+
+const queryClient = new QueryClient();
 
 const AppProviders = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -10,7 +13,9 @@ const AppProviders = ({ children }: { children: React.ReactNode }) => {
         </p>
       }
     >
-      <ThemeContextProvider>{children}</ThemeContextProvider>
+      <QueryClientProvider client={queryClient}>
+        <ThemeContextProvider>{children}</ThemeContextProvider>
+      </QueryClientProvider>
     </ErrorBoundary>
   );
 };
