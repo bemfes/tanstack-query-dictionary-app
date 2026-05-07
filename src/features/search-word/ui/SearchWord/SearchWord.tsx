@@ -1,7 +1,7 @@
-import SearchInput from "@/features/Search/SearchInput/SearchInput";
-import SearchResult from "@/features/Search/SearchResult/SearchResult";
 import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
+import SearchInput from "../SearchInput";
+import SearchResult from "../SearchResult";
 
 const SearchWord = () => {
   const [searchValue, setSearchValue] = useState<string>("keyboard");

@@ -1,10 +1,8 @@
-import SearchWord from "@/widgets/SearchWord/SearchWord"
-import type { FC } from "react"
+import SearchWord from "@/features/search-word/ui/SearchWord";
+import type { FC } from "react";
 
 const SearchPage: FC = () => {
-    return (     
-        <SearchWord/>
-    )
-}
+  return <SearchWord />;
+};
 
-export default SearchPage
+export default SearchPage;
