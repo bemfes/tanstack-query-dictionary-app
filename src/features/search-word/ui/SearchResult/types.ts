@@ -1,4 +1,4 @@
-import type { DictionaryWordType } from "@/shared/types/DictionaryWordType";
+import type { DictionaryWordType } from "../../model";
 
 export interface SearchResultProps {
   data: DictionaryWordType[];

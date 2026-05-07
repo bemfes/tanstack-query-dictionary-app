@@ -1,7 +1,7 @@
 import { type FC } from "react";
 import type { SearchResultProps } from "./types";
-import type { DictionaryWordType } from "@/shared/types/DictionaryWordType";
 import "./SearchResult.css";
+import type { DictionaryWordType } from "../../model";
 
 const SearchResult: FC<SearchResultProps> = ({ data, isLoading, error }) => {
   return (
