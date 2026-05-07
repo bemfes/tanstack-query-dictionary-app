@@ -1,0 +1,1 @@
+export { getWord } from "./getWord";
