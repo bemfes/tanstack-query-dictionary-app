@@ -2,6 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
 import SearchInput from "../SearchInput";
 import SearchResult from "../SearchResult";
+import { getWord } from "../../api";
 
 const SearchWord = () => {
   const [searchValue, setSearchValue] = useState<string>("keyboard");
@@ -24,7 +25,7 @@ const SearchWord = () => {
 
   const { data, isLoading, error, refetch } = useQuery({
     queryKey: ["search"],
-    queryFn: getData,
+    queryFn: () => getWord(searchValue),
   });
 
   return (
