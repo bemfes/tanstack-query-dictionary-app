@@ -69,7 +69,9 @@ const SearchResult: FC<SearchResultProps> = ({
           ))}
         </div>
       )}
-      {error && <p className="search-result-util">{error.message}</p>}
+      {error && !isFetching && !isLoading && (
+        <p className="search-result-util">{error.message}</p>
+      )}
     </div>
   );
 };
