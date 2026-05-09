@@ -21,7 +21,7 @@ export const useSearchWord = () => {
     }
   };
 
-  const { data, isLoading, error, refetch } = useQuery({
+  const { data, isLoading, isFetching, error, refetch } = useQuery({
     queryKey: ["search"],
     queryFn: () => getWord(searchValue),
   });
@@ -34,6 +34,7 @@ export const useSearchWord = () => {
     onKeyDownSearchInput,
     data,
     isLoading,
+    isFetching,
     error,
   };
 };
