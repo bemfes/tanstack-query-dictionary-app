@@ -11,6 +11,7 @@ const SearchWord = () => {
     onClickButtonSearch,
     data,
     isLoading,
+    isFetching,
     error,
   } = useSearchWord();
   return (
@@ -22,7 +23,12 @@ const SearchWord = () => {
         onClickButtonSearch={onClickButtonSearch}
         onClickButtonDeleteSearchValue={onClickButtonDeleteSearchValue}
       />
-      <SearchResult data={data} isLoading={isLoading} error={error} />
+      <SearchResult
+        isFetching={isFetching}
+        data={data}
+        isLoading={isLoading}
+        error={error}
+      />
     </>
   );
 };
