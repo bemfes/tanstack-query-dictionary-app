@@ -1,6 +1,9 @@
+import type { DictionaryWordType } from "../model";
 import { DICTIONARY_API_URL } from "./constants";
 
-export const getWord = async function (searchValue: string) {
+export const getWord = async function (
+  searchValue: string,
+): Promise<DictionaryWordType[]> {
   const res = await fetch(`${DICTIONARY_API_URL}${searchValue}`);
   if (!res.ok) {
     if (res.status === 404) {
