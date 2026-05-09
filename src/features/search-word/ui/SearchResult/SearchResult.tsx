@@ -3,11 +3,18 @@ import type { SearchResultProps } from "./types";
 import "./SearchResult.css";
 import type { DictionaryWordType } from "../../model";
 
-const SearchResult: FC<SearchResultProps> = ({ data, isLoading, error }) => {
+const SearchResult: FC<SearchResultProps> = ({
+  data,
+  isLoading,
+  isFetching,
+  error,
+}) => {
   return (
     <div>
-      {isLoading && <p className="search-result-util">Loading...</p>}
-      {!isLoading && data && !error && (
+      {(isLoading || isFetching) && (
+        <p className="search-result-util">Loading...</p>
+      )}
+      {!isLoading && !isFetching && data && !error && (
         <div>
           {data.map((item: DictionaryWordType, index) => (
             <div className="word" key={index}>
