@@ -1,13 +1,10 @@
-import { useEffect, useState, type FC } from "react";
+import { useEffect, type FC } from "react";
 import type { ThemeContextProviderProps, ThemeType } from "./types";
 import { ThemeContext } from "./context";
+import { useLocalStorage } from "@/shared/lib/hooks/useLocalStorage";
 
 const ThemeContextProvider: FC<ThemeContextProviderProps> = ({ children }) => {
-  const [theme, setTheme] = useState<ThemeType>(() => {
-    const storedTheme = localStorage.getItem("theme");
-    if (storedTheme === "dark" || storedTheme === "light") return storedTheme;
-    return "light";
-  });
+  const [theme, setTheme] = useLocalStorage<ThemeType>("theme", "light");
 
   function changeTheme() {
     setTheme((prev) => (prev === "light" ? "dark" : "light"));
@@ -15,7 +12,6 @@ const ThemeContextProvider: FC<ThemeContextProviderProps> = ({ children }) => {
 
   useEffect(() => {
     document.body.setAttribute("data-theme", theme);
-    localStorage.setItem("theme", theme);
   }, [theme]);
 
   return (
