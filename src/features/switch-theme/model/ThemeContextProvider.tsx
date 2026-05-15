@@ -7,7 +7,7 @@ const ThemeContextProvider: FC<ThemeContextProviderProps> = ({ children }) => {
   const [theme, setTheme] = useLocalStorage<ThemeType>("theme", "light");
 
   function changeTheme() {
-    setTheme((prev) => (prev === "light" ? "dark" : "light"));
+    setTheme((prev: ThemeType) => (prev === "light" ? "dark" : "light"));
   }
 
   useEffect(() => {
