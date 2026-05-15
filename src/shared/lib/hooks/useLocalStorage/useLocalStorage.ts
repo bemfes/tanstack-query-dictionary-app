@@ -15,7 +15,7 @@ export function useLocalStorage<T>(key: string, initialValue: T | (() => T)) {
       try {
         return JSON.parse(jsonValue);
       } catch {
-        getInitialValue();
+        return getInitialValue();
       }
     }
 
